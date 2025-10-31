@@ -14,8 +14,36 @@ function ensureContentVisible() {
 // Run visibility check after a delay
 setTimeout(ensureContentVisible, 2000);
 
+// Set dynamic years
+function setDynamicYears() {
+    const currentYear = new Date().getFullYear();
+    const nextYear = currentYear + 1;
+    
+    // Set copyright year
+    const copyrightElement = document.getElementById('current-year');
+    if (copyrightElement) {
+        copyrightElement.textContent = currentYear;
+    }
+    
+    // Set coming soon current year badges
+    document.querySelectorAll('.coming-soon-current-year').forEach(element => {
+        element.textContent = currentYear;
+    });
+    
+    // Set coming soon next year badges
+    document.querySelectorAll('.coming-soon-next-year').forEach(element => {
+        element.textContent = nextYear;
+    });
+}
+
+// Set years immediately
+setDynamicYears();
+
 // Initialize all animations when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
+    // Set dynamic years first
+    setDynamicYears();
+    
     // Basic functionality first
     initializeMobileNav();
     initializeNavbarEffects();
@@ -154,6 +182,15 @@ function initializeAnimations() {
             }
         });
     });
+    
+    } catch (error) {
+        console.log('Animation initialization error:', error);
+        // Ensure all content is visible if animations fail
+        gsap.set('section, .service-card, .highlight-card, .coming-soon-card, .gallery-item', {
+            opacity: 1,
+            visibility: 'visible'
+        });
+    }
 }
 
 // Typewriter effect for hero title
