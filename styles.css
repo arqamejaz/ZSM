@@ -110,7 +110,7 @@ body {
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-                url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+                url('images/zsm-express-store-entrance-exterior.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -330,10 +330,83 @@ body {
     line-height: 1.6;
 }
 
+/* Highlights Section */
+.highlights {
+    padding: 100px 0;
+    background: #f8f9fa;
+}
+
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.highlight-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.highlight-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(231, 76, 60, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.highlight-card:hover::before {
+    left: 100%;
+}
+
+.highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    border-color: #e74c3c;
+}
+
+.highlight-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.highlight-card:hover .highlight-icon {
+    transform: scale(1.2) rotateY(360deg);
+}
+
+.highlight-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.highlight-card:hover h3 {
+    color: #e74c3c;
+}
+
+.highlight-card p {
+    color: #7f8c8d;
+    line-height: 1.6;
+}
+
 /* Gallery Section */
 .gallery {
     padding: 100px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .gallery-grid {
@@ -362,6 +435,118 @@ body {
 
 .gallery-item:hover img {
     transform: scale(1.1);
+}
+
+/* Coming Soon Section */
+.coming-soon {
+    padding: 100px 0;
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(231, 76, 60, 0.03) 50%, transparent 70%);
+    pointer-events: none;
+}
+
+.coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.coming-soon-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.coming-soon-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent, rgba(231, 76, 60, 0.05), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.coming-soon-card:hover::before {
+    opacity: 1;
+}
+
+.coming-soon-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+    border-color: #e74c3c;
+}
+
+.coming-soon-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    display: block;
+    transition: all 0.4s ease;
+    filter: grayscale(30%);
+}
+
+.coming-soon-card:hover .coming-soon-icon {
+    transform: scale(1.3) rotateY(360deg);
+    filter: grayscale(0%);
+}
+
+.coming-soon-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.coming-soon-card:hover h3 {
+    color: #e74c3c;
+}
+
+.coming-soon-card p {
+    color: #7f8c8d;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.coming-badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #e74c3c, #f39c12);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
 }
 
 /* Why Choose Us Section */
@@ -603,6 +788,97 @@ body {
     }
 }
 
+/* Typewriter effect */
+.hero-title::after {
+    content: '|';
+    display: inline-block;
+    animation: blink 1s infinite;
+    color: #e74c3c;
+    font-weight: 400;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Floating particles */
+.floating-particle {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-20px) rotate(90deg); }
+    50% { transform: translateY(0) rotate(180deg); }
+    75% { transform: translateY(-10px) rotate(270deg); }
+}
+
+/* Enhanced card animations */
+.service-card, .highlight-card, .coming-soon-card {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    opacity: 1; /* Ensure visibility by default */
+}
+
+/* Fallback visibility for all content */
+section, .service-card, .highlight-card, .coming-soon-card, .gallery-item {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Gradient text effect */
+.section-title {
+    background: linear-gradient(135deg, #2c3e50, #e74c3c);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+}
+
+/* Glowing hover effect */
+.cta-button:hover {
+    box-shadow: 
+        0 0 20px rgba(231, 76, 60, 0.4),
+        0 0 40px rgba(231, 76, 60, 0.2),
+        0 8px 25px rgba(231, 76, 60, 0.4);
+}
+
+/* Smooth transitions for all interactive elements */
+.service-card, .highlight-card, .coming-soon-card, .gallery-item, .cta-button, .nav-link {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Loading animation */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.loader::after {
+    content: '';
+    width: 50px;
+    height: 50px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #e74c3c;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-menu {
@@ -673,14 +949,27 @@ body {
 
     .services-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .highlights-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .coming-soon-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .gallery-grid {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 
     .contact-content {

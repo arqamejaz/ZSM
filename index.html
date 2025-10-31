@@ -3,12 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZSM Express Inc - Your One-Stop Travel Destination</title>
-    <meta name="description" content="ZSM Express Inc - Gas station, convenience store, and restaurant serving travelers and locals. Fuel up, refresh, and keep moving on your journey.">
+    <title>ZSM Express Inc - Gas Station, Convenience Store & Travel Plaza | 24/7 Fuel & Services</title>
+    <meta name="description" content="ZSM Express Inc - Premier gas station, convenience store & travel plaza. 24/7 fuel services, Texas lottery, ATM, grocery, automotive supplies, and truck stop facilities. Your trusted roadside partner.">
+    <meta name="keywords" content="gas station, convenience store, travel plaza, truck stop, fuel, diesel, Texas lottery, ATM, grocery, automotive, ZSM Express, 24/7 service">
+    <meta name="author" content="ZSM Express Inc">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="business.business">
+    <meta property="og:title" content="ZSM Express Inc - Your One-Stop Travel Destination">
+    <meta property="og:description" content="Premier gas station and convenience store serving travelers and locals. 24/7 fuel, groceries, Texas lottery, and truck stop facilities.">
+    <meta property="og:image" content="images/zsm-express-store-entrance-exterior.jpg">
+    <meta property="og:url" content="https://zsmexpress.com">
+    <meta property="og:site_name" content="ZSM Express Inc">
+    <meta property="business:contact_data:street_address" content="123 Highway Route">
+    <meta property="business:contact_data:locality" content="Cityville">
+    <meta property="business:contact_data:region" content="State">
+    <meta property="business:contact_data:postal_code" content="12345">
+    <meta property="business:contact_data:country_name" content="United States">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://zsmexpress.com">
+    <meta property="twitter:title" content="ZSM Express Inc - Your One-Stop Travel Destination">
+    <meta property="twitter:description" content="Premier gas station and convenience store serving travelers and locals. 24/7 fuel, groceries, Texas lottery, and truck stop facilities.">
+    <meta property="twitter:image" content="images/zsm-express-store-entrance-exterior.jpg">
+    
+    <!-- Additional SEO -->
+    <link rel="canonical" href="https://zsmexpress.com">
+    <meta name="geo.region" content="US-STATE">
+    <meta name="geo.placename" content="Cityville">
+    <meta name="geo.position" content="latitude;longitude">
+    <meta name="ICBM" content="latitude, longitude">
+    <!-- Performance Optimizations -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Critical Resources -->
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="images/zsm-express-store-entrance-exterior.jpg" as="image">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" as="style">
+    
+    <!-- Stylesheets -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "GasStation",
+        "name": "ZSM Express Inc",
+        "description": "Premier gas station, convenience store, and travel plaza serving travelers and locals with 24/7 fuel services, Texas lottery, ATM, grocery, and truck stop facilities.",
+        "url": "https://zsmexpress.com",
+        "logo": "https://zsmexpress.com/images/zsm-express-store-entrance-exterior.jpg",
+        "image": [
+            "https://zsmexpress.com/images/zsm-express-convenience-store-interior.jpg",
+            "https://zsmexpress.com/images/zsm-express-cashier-counter-lottery.jpg",
+            "https://zsmexpress.com/images/zsm-express-beverage-aisle-automotive.jpg"
+        ],
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "123 Highway Route, Travel Plaza",
+            "addressLocality": "Cityville",
+            "addressRegion": "State",
+            "postalCode": "12345",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "latitude",
+            "longitude": "longitude"
+        },
+        "telephone": "(555) 123-4567",
+        "email": "info@zsmexpress.com",
+        "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
+        "priceRange": "$",
+        "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "EBT"],
+        "currenciesAccepted": "USD",
+        "amenityFeature": [
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "24/7 Fuel Service",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "ATM",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Restrooms",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Truck Parking",
+                "value": true
+            },
+            {
+                "@type": "LocationFeatureSpecification",
+                "name": "Texas Lottery",
+                "value": true
+            }
+        ],
+        "makesOffer": [
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Premium Gasoline",
+                    "description": "Branded Regular, Super, and Mid Grade gasoline"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Diesel Fuel",
+                    "description": "Quality diesel fuel for trucks and vehicles"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Product",
+                    "name": "Convenience Store",
+                    "description": "Groceries, snacks, beverages, and everyday essentials"
+                }
+            },
+            {
+                "@type": "Offer",
+                "itemOffered": {
+                    "@type": "Service",
+                    "name": "ATM Service",
+                    "description": "24/7 ATM access for cash withdrawals"
+                }
+            }
+        ],
+        "sameAs": [
+            "https://www.facebook.com/zsmexpress",
+            "https://www.instagram.com/zsmexpress",
+            "https://twitter.com/zsmexpress"
+        ]
+    }
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -28,7 +175,13 @@
                     <a href="#services" class="nav-link">Services</a>
                 </li>
                 <li class="nav-item">
+                    <a href="#highlights" class="nav-link">Highlights</a>
+                </li>
+                <li class="nav-item">
                     <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#coming-soon" class="nav-link">Coming Soon</a>
                 </li>
                 <li class="nav-item">
                     <a href="#contact" class="nav-link">Contact</a>
@@ -95,7 +248,7 @@
                     </div>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern convenience store interior">
+                    <img src="images/zsm-express-convenience-store-interior.jpg" alt="ZSM Express Inc modern convenience store interior with organized aisles and quality products" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -111,23 +264,70 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">⛽</div>
-                    <h3>Fuel & Diesel</h3>
-                    <p>Premium quality gasoline and diesel fuel available 24/7. Clean, well-lit pumps with modern payment systems for your convenience.</p>
+                    <h3>Premium Fuel Services</h3>
+                    <p>Branded Regular, Super, and Mid Grade gasoline plus quality diesel fuel. Our new fuel pumps feature modern payment systems and 24/7 availability for your convenience.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🛒</div>
-                    <h3>Grocery & Dairy</h3>
-                    <p>Fresh milk, yogurt, snacks, beverages, and everyday essentials. Stock up on road trip supplies or grab last-minute necessities.</p>
+                    <h3>Convenience Store</h3>
+                    <p>Fresh groceries, dairy products, snacks, beverages, and everyday essentials at competitive prices. Stock up on road trip supplies or grab last-minute necessities.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🍔</div>
-                    <h3>Food & Drinks</h3>
-                    <p>Hot coffee, fresh sandwiches, and delicious meals prepared daily. Perfect for a quick bite or a satisfying meal on the road.</p>
+                    <div class="service-icon">🎰</div>
+                    <h3>Texas Lottery & Gaming</h3>
+                    <p>Full selection of Texas Lottery tickets and scratch-off games. Try your luck with the latest games and jackpots available daily.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🏧</div>
+                    <h3>ATM & Financial Services</h3>
+                    <p>Convenient ATM access with competitive fees. Easy cash withdrawals and financial transactions available 24/7 for your banking needs.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">🚛</div>
                     <h3>Truck Stop Facilities</h3>
                     <p>Spacious parking, clean restrooms, and amenities designed for professional drivers and large vehicles. Rest comfortably during your journey.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚗</div>
+                    <h3>Automotive Products</h3>
+                    <p>Essential automotive supplies including motor oil, windshield fluid, and car care products to keep your vehicle running smoothly on the road.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights">
+        <div class="container">
+            <div class="highlights-header">
+                <h2 class="section-title">Why Customers Choose ZSM Express</h2>
+                <p class="section-subtitle">Experience the advantages that set us apart from the competition.</p>
+            </div>
+            <div class="highlights-grid">
+                <div class="highlight-card">
+                    <div class="highlight-icon">😊</div>
+                    <h3>Best Friendly Service</h3>
+                    <p>Our staff goes above and beyond to ensure every customer feels welcome and receives exceptional service with a genuine smile.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🚬</div>
+                    <h3>Competitive Tobacco Prices</h3>
+                    <p>Lowest cigarette prices in the area with a full selection of popular brands. Save money on your tobacco purchases every day.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">💰</div>
+                    <h3>Affordable Grocery Prices</h3>
+                    <p>Beat the competition with our everyday low prices on groceries, snacks, and convenience items. Quality products at unbeatable prices.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🎲</div>
+                    <h3>Texas Lottery Headquarters</h3>
+                    <p>Complete selection of Texas Lottery tickets and scratch-offs. Your lucky numbers and favorite games are always available.</p>
+                </div>
+                <div class="highlight-card">
+                    <div class="highlight-icon">🏧</div>
+                    <h3>24/7 ATM Access</h3>
+                    <p>Convenient ATM service available around the clock with competitive fees. Get cash whenever you need it, day or night.</p>
                 </div>
             </div>
         </div>
@@ -142,22 +342,82 @@
             </div>
             <div class="gallery-grid">
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Modern gas station pumps">
+                    <img src="images/zsm-express-snack-aisles-organized.jpg" alt="ZSM Express organized snack aisles with wide variety of products and modern red fixtures" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Convenience store aisles">
+                    <img src="images/zsm-express-cashier-counter-lottery.jpg" alt="ZSM Express cashier counter with Texas lottery tickets, cigarettes, and professional POS system" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Fresh coffee and food">
+                    <img src="images/zsm-express-beverage-aisle-automotive.jpg" alt="ZSM Express beverage aisle featuring energy drinks, automotive products, and ATM service" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Truck parking area">
+                    <img src="images/zsm-express-grocery-section-products.jpg" alt="ZSM Express grocery section with fresh dairy products and everyday essentials" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Clean restroom facilities">
+                    <img src="images/zsm-express-atm-service-area.jpg" alt="ZSM Express ATM service area with convenient access and modern store layout" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Grocery section">
+                    <img src="images/zsm-express-checkout-counter-technology.jpg" alt="ZSM Express modern checkout counter with advanced POS technology and customer service area" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coming Soon Section -->
+    <section id="coming-soon" class="coming-soon">
+        <div class="container">
+            <div class="coming-soon-header">
+                <h2 class="section-title">Coming Soon</h2>
+                <p class="section-subtitle">Exciting new services and features we're bringing to ZSM Express Inc.</p>
+            </div>
+            <div class="coming-soon-grid">
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🍕</div>
+                    <h3>Food Services</h3>
+                    <p>Full-service deli and hot food counter featuring fresh meals, hot sandwiches, and daily specials for hungry travelers.</p>
+                    <span class="coming-badge">2024</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">💳</div>
+                    <h3>EBT Accepted</h3>
+                    <p>Electronic Benefits Transfer (EBT) payment processing for SNAP recipients to purchase eligible food items conveniently.</p>
+                    <span class="coming-badge">2024</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">💰</div>
+                    <h3>Bills Pay & Money Orders</h3>
+                    <p>Pay your utilities, rent, and other bills on-site. Money order services for secure financial transactions and transfers.</p>
+                    <span class="coming-badge">2024</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🚗</div>
+                    <h3>Drive Through</h3>
+                    <p>Convenient drive-through service for quick purchases without leaving your vehicle. Perfect for busy travelers and locals.</p>
+                    <span class="coming-badge">2025</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🔧</div>
+                    <h3>Expanded Automotive Section</h3>
+                    <p>Complete automotive department with tools, parts, accessories, and maintenance supplies for all your vehicle needs.</p>
+                    <span class="coming-badge">2025</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">📄</div>
+                    <h3>Copy & Fax Service</h3>
+                    <p>Professional copy and fax services for business travelers and locals. Print, scan, and send documents on the go.</p>
+                    <span class="coming-badge">2024</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">📝</div>
+                    <h3>Office Supply</h3>
+                    <p>Essential office supplies including pens, paper, folders, and business necessities for professionals and students.</p>
+                    <span class="coming-badge">2024</span>
+                </div>
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🔑</div>
+                    <h3>Key Services</h3>
+                    <p>Professional key cutting and duplication services. Car keys, house keys, and specialty key services for your security needs.</p>
+                    <span class="coming-badge">2025</span>
                 </div>
             </div>
         </div>
@@ -271,6 +531,9 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
+                        <li><a href="#highlights">Highlights</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#coming-soon">Coming Soon</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
