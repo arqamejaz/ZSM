@@ -462,7 +462,7 @@ function initializeGalleryEffects() {
     });
 }
 
-// Enhanced form handling
+// Enhanced form handling with Formspree integration
 function initializeFormHandling() {
     const contactForm = document.querySelector('.contact-form');
     
@@ -500,18 +500,47 @@ function initializeFormHandling() {
         submitButton.textContent = 'Sending...';
         submitButton.disabled = true;
         
-        // Simulate form submission
-        setTimeout(() => {
-            submitButton.textContent = 'Message Sent!';
+        // Submit to Formspree
+        fetch(this.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        }).then(response => {
+            if (response.ok) {
+                submitButton.textContent = 'Message Sent!';
+                gsap.to(submitButton, {
+                    backgroundColor: '#27ae60',
+                    duration: 0.3
+                });
+                
+                showNotification('Message sent successfully! We\'ll get back to you soon.', 'success');
+                
+                // Reset form
+                this.reset();
+                
+                // Reset button after 3 seconds
+                setTimeout(() => {
+                    submitButton.textContent = originalText;
+                    gsap.to(submitButton, {
+                        backgroundColor: '',
+                        duration: 0.3
+                    });
+                    submitButton.disabled = false;
+                }, 3000);
+            } else {
+                throw new Error('Network response was not ok');
+            }
+        }).catch(error => {
+            console.error('Form submission error:', error);
+            submitButton.textContent = 'Try Again';
             gsap.to(submitButton, {
-                backgroundColor: '#27ae60',
+                backgroundColor: '#e74c3c',
                 duration: 0.3
             });
             
-            showNotification('Message sent successfully!', 'success');
-            
-            // Reset form
-            this.reset();
+            showNotification('Failed to send message. Please try again or contact us directly.', 'error');
             
             // Reset button after 3 seconds
             setTimeout(() => {
@@ -522,7 +551,7 @@ function initializeFormHandling() {
                 });
                 submitButton.disabled = false;
             }, 3000);
-        }, 1000);
+        });
     });
 }
 
